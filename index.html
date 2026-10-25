@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>相談支援事業所 カーティアス パートナー｜合同会社カーティアス坂城</title>
+<meta name="description" content="長野県埴科郡坂城町の障がい福祉相談事業所「カーティアス パートナー」。特定相談支援事業・障がい児相談支援事業の認可を受け、福祉サービスの利用に関するご相談をお受けしています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #faf7f2;
+    --color-surface: #ffffff;
+    --color-text: #333333;
+    --color-muted: #666666;
+    --color-main: #2f6f6a;
+    --color-main-light: #e6f0ee;
+    --color-accent: #d9775f;
+    --color-accent-light: #fbeee9;
+    --color-line: #e3ddd3;
+    --radius: 14px;
+    --max-width: 1080px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+  body {
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.9;
+    font-size: 16px;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { color: var(--color-main); }
+
+  .container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ===== ヘッダー ===== */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--color-line);
+    backdrop-filter: blur(6px);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .logo {
+    text-decoration: none;
+    color: var(--color-text);
+    line-height: 1.3;
+  }
+  .logo small {
+    display: block;
+    font-size: 11px;
+    color: var(--color-muted);
+  }
+  .logo span {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--color-main);
+  }
+  .global-nav ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+  .global-nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .global-nav a:hover { color: var(--color-main); }
+  .nav-toggle, .nav-toggle-label { display: none; }
+
+  /* ===== メインビジュアル ===== */
+  .hero {
+    background: linear-gradient(135deg, var(--color-main-light) 0%, var(--color-accent-light) 100%);
+    padding: 72px 0;
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .hero-sub {
+    font-size: 15px;
+    color: var(--color-main);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  .hero h1 {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 40px;
+    line-height: 1.4;
+    margin: 8px 0 20px;
+  }
+  .hero-lead {
+    font-size: 17px;
+    margin-bottom: 28px;
+  }
+  .hero-visual {
+    text-align: center;
+  }
+  .hero-visual svg {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+  }
+  .hero-visual p {
+    font-family: "Zen Maru Gothic", sans-serif;
+    color: var(--color-muted);
+    margin-top: 8px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 999px;
+    background: var(--color-accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: opacity 0.2s;
+  }
+  .btn:hover { opacity: 0.85; }
+
+  /* ===== セクション共通 ===== */
+  section { padding: 80px 0; }
+  section:nth-of-type(even) { background: var(--color-surface); }
+  .section-title {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin: 12px auto 0;
+    background: var(--color-accent);
+    border-radius: 2px;
+  }
+  .narrow { max-width: 760px; margin: 0 auto; }
+
+  /* ===== 私たちについて ===== */
+  .about-text p + p { margin-top: 1em; }
+
+  /* ===== サービス ===== */
+  .worries {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .worry {
+    background: var(--color-main-light);
+    border-radius: var(--radius);
+    padding: 24px 16px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--color-main);
+  }
+  .service-box {
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius);
+    padding: 32px;
+  }
+  .service-box p + p { margin-top: 1em; }
+  .free-badge {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 2px 12px;
+    border-radius: 999px;
+    margin-right: 8px;
+  }
+  .highlight {
+    background: var(--color-accent-light);
+    border-radius: 10px;
+    padding: 16px 20px;
+  }
+  .business-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 40px;
+    list-style: none;
+  }
+  .business-list li {
+    background: var(--color-surface);
+    border-left: 5px solid var(--color-main);
+    border-radius: 8px;
+    padding: 18px 20px;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  .sub-title {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 48px;
+    color: var(--color-main);
+  }
+
+  /* ===== 事業所紹介 ===== */
+  .facility {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .facility figure {
+    background: var(--color-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .facility img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .facility figcaption {
+    padding: 16px 20px;
+  }
+  .facility figcaption strong {
+    display: block;
+    color: var(--color-main);
+    font-size: 17px;
+  }
+
+  /* ===== 開所の想い ===== */
+  .message {
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  .message p + p { margin-top: 1em; }
+  .message-catch {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-accent);
+    margin: 28px 0 8px;
+  }
+  .name-origin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .name-origin div {
+    background: var(--color-main-light);
+    border-radius: 10px;
+    padding: 16px 20px;
+  }
+  .name-origin dt {
+    font-weight: 700;
+    color: var(--color-main);
+  }
+
+  /* ===== 会社概要 ===== */
+  .company-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-surface);
+  }
+  .company-table th,
+  .company-table td {
+    text-align: left;
+    vertical-align: top;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .company-table th {
+    width: 28%;
+    background: var(--color-main-light);
+    color: var(--color-main);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .history {
+    list-style: none;
+    margin-top: 48px;
+    border-left: 3px solid var(--color-main);
+    padding-left: 24px;
+  }
+  .history li { position: relative; padding: 8px 0; }
+  .history li::before {
+    content: "";
+    position: absolute;
+    left: -32px;
+    top: 18px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--color-accent);
+  }
+  .history time {
+    font-weight: 700;
+    margin-right: 16px;
+  }
+
+  /* ===== お問い合わせ ===== */
+  .contact-card {
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  .contact-name {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .contact-name small {
+    display: block;
+    font-size: 14px;
+    color: var(--color-muted);
+  }
+  .contact-tel {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--color-main);
+    text-decoration: none;
+    margin: 12px 0 4px;
+  }
+  .contact-info { margin-top: 16px; }
+  .contact-note {
+    margin-top: 32px;
+    text-align: left;
+  }
+  .contact-note p + p { margin-top: 0.8em; }
+
+  /* ===== フッター ===== */
+  .site-footer {
+    background: var(--color-main);
+    color: #fff;
+    text-align: center;
+    padding: 32px 0;
+    font-size: 14px;
+  }
+  .site-footer small { display: block; margin-top: 8px; opacity: 0.8; }
+
+  /* ===== レスポンシブ ===== */
+  @media (max-width: 860px) {
+    .nav-toggle-label {
+      display: block;
+      width: 32px;
+      height: 32px;
+      position: relative;
+      cursor: pointer;
+    }
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      position: absolute;
+      left: 4px;
+      width: 24px;
+      height: 2px;
+      background: var(--color-text);
+      content: "";
+    }
+    .nav-toggle-label span { top: 15px; }
+    .nav-toggle-label span::before { top: -8px; left: 0; }
+    .nav-toggle-label span::after { top: 8px; left: 0; }
+    .global-nav {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-line);
+      display: none;
+    }
+    .global-nav ul { flex-direction: column; gap: 0; }
+    .global-nav a { display: block; padding: 14px 20px; border-top: 1px solid var(--color-line); }
+    .nav-toggle:checked ~ .global-nav { display: block; }
+
+    .hero { padding: 48px 0; }
+    .hero-inner { grid-template-columns: 1fr; text-align: center; }
+    .hero h1 { font-size: 30px; }
+    .worries { grid-template-columns: 1fr 1fr; }
+    .business-list,
+    .facility,
+    .name-origin { grid-template-columns: 1fr; }
+    section { padding: 56px 0; }
+    .service-box, .message, .contact-card { padding: 24px; }
+    .company-table th { width: 34%; white-space: normal; }
+    .company-table th, .company-table td { padding: 12px 14px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== ヘッダー ===== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="logo">
+      <small>相談支援事業所</small>
+      <span>カーティアス パートナー</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="メニューを開く"><span></span></label>
+    <nav class="global-nav">
+      <ul>
+        <li><a href="#about">私たちについて</a></li>
+        <li><a href="#service">サービス</a></li>
+        <li><a href="#facility">事業所紹介</a></li>
+        <li><a href="#message">開所の想い</a></li>
+        <li><a href="#company">会社概要</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== メインビジュアル ===== -->
+  <div class="hero">
+    <div class="container hero-inner">
+      <div>
+        <p class="hero-sub">障がい福祉相談事業所</p>
+        <h1>地域で困っている方を<br>丁寧に応援したい</h1>
+        <p class="hero-lead">障がいをお持ちの大人の方や子どもが福祉サービスを利用するにあたって、様々なご相談をお受けしています。</p>
+        <a href="#contact" class="btn">お問い合わせはこちら</a>
+      </div>
+      <div class="hero-visual">
+        <!-- 握手とハートのイラスト（信頼を築くイメージ） -->
+        <svg viewBox="0 0 360 260" role="img" aria-label="握手をして信頼を築くイメージ">
+          <path d="M180 240 C 60 160, 20 110, 40 60 C 60 15, 130 10, 180 65 C 230 10, 300 15, 320 60 C 340 110, 300 160, 180 240 Z" fill="#d9775f" opacity="0.85"/>
+          <rect x="0" y="105" width="70" height="60" rx="6" fill="#2f6f6a"/>
+          <rect x="290" y="105" width="70" height="60" rx="6" fill="#2f6f6a"/>
+          <path d="M70 110 L 140 100 C 160 98, 175 108, 190 118 L 240 150 C 252 158, 246 176, 232 172 L 200 160" fill="#ffffff" stroke="#333" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M290 110 L 230 104 C 210 102, 190 112, 170 126 L 130 156 C 118 166, 126 182, 140 178 L 160 170 C 166 184, 182 186, 190 176 C 198 188, 214 186, 220 174 C 230 182, 246 176, 244 162 L 290 160 Z" fill="#ffffff" stroke="#333" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M70 160 L 110 162" stroke="#333" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <p>握手をして信頼を築くイメージです</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 私たちについて ===== -->
+  <section id="about">
+    <div class="container narrow">
+      <h2 class="section-title">カーティアス パートナーについて</h2>
+      <div class="about-text">
+        <p>カーティアス パートナーは、障がい福祉相談事業所です。<br>特定相談支援事業・障がい児相談支援事業の認可を受けています。障がいをお持ちの大人の方や子どもが福祉サービスを利用するにあたって、様々なご相談をお受けいたします。</p>
+        <p>相談の中で状況や希望をお聞きして、不安を解消するまで説明を行い、質問にお答えします。その上で、福祉サービスの提案や助言、福祉サービスを利用するために必要なサービス等利用計画書を作成します。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== サービス ===== -->
+  <section id="service">
+    <div class="container">
+      <h2 class="section-title">当事業所のサービス</h2>
+      <div class="worries">
+        <div class="worry">障がい福祉って<br>何だろう？</div>
+        <div class="worry">障がい福祉サービスを<br>知りたい！</div>
+        <div class="worry">障がい福祉サービスを<br>利用したい！</div>
+        <div class="worry">手続きは<br>どうするの？</div>
+      </div>
+      <div class="service-box narrow">
+        <p>と感じたら、【カーティアス パートナー】にご連絡ください。</p>
+        <p class="highlight"><span class="free-badge">無料</span>原則として、利用者負担はかかりませんのでご安心ください。<br>相談支援事業は公費負担となるため、無料でご利用いただけます。</p>
+        <p>障がい福祉サービスを利用するには、現在お住まいの市町村窓口で利用申請が必要となります。</p>
+        <p>坂城町にお住まいの方は、【カーティアス パートナー】または坂城町役場 福祉課へお問い合わせください。<br>千曲市・上田市にお住まいの方は、各市役所の福祉課へお問い合わせください。</p>
+      </div>
+
+      <h3 class="sub-title">事業内容</h3>
+      <ul class="business-list narrow">
+        <li>指定特定相談支援事業所の運営</li>
+        <li>指定障害児相談支援事業所の運営</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 事業所紹介 ===== -->
+  <section id="facility">
+    <div class="container">
+      <h2 class="section-title">事業所紹介</h2>
+      <div class="facility">
+        <figure>
+          <img src="images/exterior.jpg" alt="カーティアス パートナー 事業所の外観" loading="lazy">
+          <figcaption>
+            <strong>事業所の外観</strong>
+            駐車場は5台駐車可能です。
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/interior.jpg" alt="カーティアス パートナー 事業所の内観（面談室）" loading="lazy">
+          <figcaption>
+            <strong>事業所の内観</strong>
+            個室で落ち着いて面談ができます。
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 開所の想い ===== -->
+  <section id="message">
+    <div class="container narrow">
+      <h2 class="section-title">開所の想い</h2>
+      <div class="message">
+        <p>福祉事業所に職員として勤務していた際に、利用者さんが不安定になる支援を度々目撃していました。雇用されている立場で何も言うことができませんでした。思い出すと、弱い自分にとても後悔しています。</p>
+        <dl class="name-origin">
+          <div>
+            <dt>カーティアス（courteous）</dt>
+            <dd>「丁寧」という意味があります。</dd>
+          </div>
+          <div>
+            <dt>パートナー（partner）</dt>
+            <dd>様々な意味がありますが、事業所として「安定」と「信頼」という意味を取りました。</dd>
+          </div>
+        </dl>
+        <p>それは、自分自身にも障がいのある子どもがいまして、支援者としての立場や保護者としての想いが色々とある中で、本人のやりたいことをどう応援できるのか考えることが多いのです。</p>
+        <p>これから出会う利用者さん、保護者の方に対して、丁寧な関わりから信頼を築き、安定感のある人生を共に歩みたい。</p>
+        <p class="message-catch">【地域で困っている方を丁寧に応援したい】</p>
+        <p style="text-align:center;">そんな想いで開所しました。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 会社概要 ===== -->
+  <section id="company">
+    <div class="container narrow">
+      <h2 class="section-title">会社概要</h2>
+      <table class="company-table">
+        <tr><th>会社名</th><td>合同会社カーティアス坂城</td></tr>
+        <tr><th>設立</th><td>2026年10月</td></tr>
+        <tr><th>代表社員</th><td>戸谷 淳</td></tr>
+        <tr><th>資本金</th><td>500,000円</td></tr>
+        <tr><th>従業員数</th><td>1名</td></tr>
+        <tr><th>所在地</th><td>長野県埴科郡坂城町上五明1338-1</td></tr>
+        <tr><th>事業内容</th><td>指定特定相談支援事業所運営<br>指定障害児相談支援事業所運営<br>その他付随する事業</td></tr>
+      </table>
+
+      <h3 class="sub-title">沿革</h3>
+      <ul class="history">
+        <li><time datetime="2026-10">2026年10月</time>法人設立</li>
+        <li><time datetime="2026-12">2026年12月</time>カーティアス パートナー開所</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== お問い合わせ ===== -->
+  <section id="contact">
+    <div class="container narrow">
+      <h2 class="section-title">お問い合わせ</h2>
+      <div class="contact-card">
+        <p class="contact-name"><small>相談支援事業所</small>カーティアス パートナー</p>
+        <p>お電話でのお問い合わせ</p>
+        <a href="tel:0268820000" class="contact-tel">0268-82-0000</a>
+        <p>FAX：0268-82-0000</p>
+        <div class="contact-info">
+          <p>〒389-0606　長野県埴科郡坂城町上五明1338-1</p>
+          <p>しなの鉄道 坂城駅より徒歩15分</p>
+          <p><a href="https://www.google.com/maps/search/?api=1&amp;query=%E9%95%B7%E9%87%8E%E7%9C%8C%E5%9F%B4%E7%A7%91%E9%83%A1%E5%9D%82%E5%9F%8E%E7%94%BA%E4%B8%8A%E4%BA%94%E6%98%8E1338-1" target="_blank" rel="noopener">地図を見る（Google マップ）</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== フッター ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <p>相談支援事業所 カーティアス パートナー（運営：合同会社カーティアス坂城）</p>
+    <small>&copy; 2026 合同会社カーティアス坂城</small>
+  </div>
+</footer>
+
+</body>
+</html>
